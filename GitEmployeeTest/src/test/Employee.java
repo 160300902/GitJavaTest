@@ -1,6 +1,7 @@
 package test;
 
 import java.util.Objects;
+import java.util.*;
 
 public class Employee implements Comparable<Employee>
 {
@@ -59,11 +60,33 @@ public class Employee implements Comparable<Employee>
 	
 	public String toString()
 	{
-		return this.getClass() + " #" + this.getId() + "\t" + this.getName() + "\t" + this.getSalary();
+		return this.getClass().getSimpleName() + " #" + this.getId() + 
+				"\t" + this.getName() + "\t" + this.getSalary();
 	}
 	
 	public int compareTo(Employee other)
 	{
 		return Integer.compare(this.salary, other.salary);
+	}
+	
+	public static void main(String... strings)
+	{
+		ArrayList<Employee> employees = new ArrayList<Employee>();
+		employees.add(new Employee("Tom", 35000));
+		employees.add(new Employee("Sam", 50000));
+		employees.add(new Employee());
+		employees.add(new Employee("Bilily", 40000));
+		
+		System.out.println("Before sorting the array");
+		for(Employee em : employees)
+		{
+			System.out.println(em);
+		}
+		Collections.sort(employees);
+		System.out.println("\nAfter sorting the array");
+		for(Employee em : employees)
+		{
+			System.out.println(em);
+		}
 	}
 }
