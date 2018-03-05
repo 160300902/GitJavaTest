@@ -40,7 +40,7 @@ public class Manager extends Employee
 	
 	public String toString()
 	{
-		return this.getClass().getSimpleName() + " #" + this.getId() + 
+		return this.getClass().getSimpleName() + "\t#" + this.getId() + 
 				"\t" + this.getName() + "\t" + this.getSalary() + 
 				"(bouns: " + this.getBouns() + ")";
 	}

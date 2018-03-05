@@ -61,7 +61,7 @@ public class Employee implements Comparable<Employee>
 	
 	public String toString()
 	{
-		return this.getClass().getSimpleName() + " #" + this.getId() + 
+		return this.getClass().getSimpleName() + "#" + this.getId() + 
 				"\t" + this.getName() + "\t" + this.getSalary();
 	}
 	
