@@ -55,7 +55,8 @@ public class Employee implements Comparable<Employee>
 		if(this.getClass() != otherObj.getClass())	return false;
 		
 		Employee other = (Employee)otherObj;
-		return (this.id == other.id) && (this.salary == other.salary) && (Objects.equals(this.name, other.name));
+		return (this.getId() == other.getId()) && (this.getSalary() == other.getSalary()) && 
+				(Objects.equals(this.getName(), other.getName()));
 	}
 	
 	public String toString()
@@ -66,7 +67,7 @@ public class Employee implements Comparable<Employee>
 	
 	public int compareTo(Employee other)
 	{
-		return Integer.compare(this.salary, other.salary);
+		return Integer.compare(this.getSalary(), other.getSalary());
 	}
 	
 	public static void main(String... strings)
