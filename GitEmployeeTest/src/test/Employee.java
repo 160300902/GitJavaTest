@@ -65,7 +65,7 @@ public class Employee implements Comparable<Employee>
 				"\t" + this.getName() + "\t" + this.getSalary();
 	}
 	
-	public int compareTo(Employee other)
+	public final int compareTo(Employee other)
 	{
 		return Integer.compare(this.getSalary(), other.getSalary());
 	}

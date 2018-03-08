@@ -5,13 +5,13 @@ import java.util.Collections;
 
 public class EmployeeTest
 {
-	public static void main(String... strings)
+	public static void main(String[] strings)
 	{
 		ArrayList<Employee> employees = new ArrayList<Employee>();
 		employees.add(new Employee("Tom", 35000));
 		employees.add(new Manager("Sam", 50000));
 		employees.add(new Manager());
-		employees.add(new Employee("Bilily", 40000));
+		employees.add(new Employee("Bilily", 55000));
 		
 		System.out.println("Before sorting the array");
 		for(Employee em : employees)
