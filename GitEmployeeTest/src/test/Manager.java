@@ -45,11 +45,6 @@ public class Manager extends Employee
 				"(bouns: " + this.getBouns() + ")";
 	}
 	
-	/*public int compareTo(Manager other)
-	{
-		return Integer.compare(this.getSalary(), other.getSalary());
-	}*/
-	
 	public boolean equals(Object otherObj)
 	{
 		if(this == otherObj)	return true;
